@@ -6,7 +6,7 @@ async def bong_channel_storage_whatever(ctx, data):
     channel = data[0]
     await vbu.menus.Menu.callbacks.set_table_column(vbu.menus.DataLocation.GUILD, "guild_settings", "bong_channel_id")(ctx, (channel,))
     ctx.bot.guild_settings[ctx.guild.id]["bong_channel_id"] = channel.id if channel is not None else channel
-    if channel is None:
+    if channel is None:🍡| conversando 1
         return
     try:
         webhook = await channel.create_webhook(name="Big Ben")
